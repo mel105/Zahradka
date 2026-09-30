@@ -1,0 +1,12 @@
+[Unit]
+Description=Zahradka
+After=network.target
+
+[Service]
+User=<tvoj-user>
+WorkingDirectory=/home/<tvoj-user>/Apps/Zahradka
+ExecStart=/usr/bin/python3 server.py --no-browser --host 0.0.0.0 --port 8768 --cert data/cert.pem --key data/key.pem
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
