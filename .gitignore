@@ -1,0 +1,32 @@
+# --- Dáta aplikácie do Gitu NEPATRIA ---
+data/                 # databáza, zálohy, nahraté výpisy a zošity, exporty, log, certifikát
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# zdrojové zošity a výpisy z banky, ak by ležali mimo data/
+*.xlsx
+*.xls
+*.csv
+
+# certifikáty a kľúče (HTTPS na serveri)
+*.pem
+*.key
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# --- Systém / editory ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+*.bak

@@ -9,3 +9,25 @@ Záhradka vypnutá.
 
 ==== 2026-09-30 11:21:50 Å¡tart verzie 1.1.0 ====
 Záhradka 1.1.0 beží: http://127.0.0.1:8768/
+
+==== 2026-10-06 10:10:48 Å¡tart verzie 1.1.0 ====
+Záhradka 1.1.0 beží: http://127.0.0.1:8768/
+
+==== 2026-10-08 19:41:43 Å¡tart verzie 1.1.0 ====
+Záhradka 1.1.0 beží: http://127.0.0.1:8768/
+Traceback (most recent call last):
+  File "C:\Users\eliasmichal\Dev\Projects\Personal\Zahradka\server.py", line 269, in do_GET
+    return self._send(200, GET[path](self, qs(self)))
+                           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\eliasmichal\Dev\Projects\Personal\Zahradka\server.py", line 58, in api_plan
+    rok = int(q.get("rok") or core.today().year)
+ValueError: invalid literal for int() with base 10: 'NaN'
+2026-10-08 19:44:05 "GET /api/plan?rok=NaN HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "C:\Users\eliasmichal\Dev\Projects\Personal\Zahradka\server.py", line 269, in do_GET
+    return self._send(200, GET[path](self, qs(self)))
+                           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\eliasmichal\Dev\Projects\Personal\Zahradka\server.py", line 58, in api_plan
+    rok = int(q.get("rok") or core.today().year)
+ValueError: invalid literal for int() with base 10: 'NaN'
+2026-10-08 19:44:19 "GET /api/plan?rok=NaN HTTP/1.1" 500 -
